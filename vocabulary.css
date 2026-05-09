@@ -1,0 +1,303 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #172033;
+  background: #f3f6fa;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f6fa;
+}
+
+.vocab-page {
+  width: min(980px, calc(100vw - 32px));
+  margin: 32px auto;
+}
+
+.vocab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 180px 160px;
+  gap: 10px;
+  margin-bottom: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  color: #172033;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
+  padding: 8px 10px;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+button {
+  min-height: 38px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.secondary-button,
+.danger-button {
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+.secondary-button:hover {
+  background: #f8fafc;
+}
+
+.danger-button {
+  color: #991b1b;
+}
+
+.danger-button:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.empty-state {
+  color: #64748b;
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 28px;
+  text-align: center;
+}
+
+.vocab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vocab-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vocab-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.vocab-summary::-webkit-details-marker {
+  display: none;
+}
+
+.vocab-main {
+  min-width: 0;
+}
+
+.word-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.word {
+  color: #111827;
+  font-size: 22px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.translit {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.meaning {
+  margin-top: 4px;
+  color: #334155;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lang-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-top: 8px;
+  padding: 2px 8px;
+  color: #0f766e;
+  background: #ecfdf5;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vocab-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-body {
+  border-top: 1px solid #e2e8f0;
+  padding: 14px 16px 16px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.detail-row:first-child {
+  margin-top: 0;
+}
+
+.detail-label {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.detail-value {
+  color: #172033;
+  overflow-wrap: anywhere;
+}
+
+.export-dialog {
+  width: min(420px, calc(100vw - 32px));
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.24);
+  padding: 22px;
+}
+
+.export-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.32);
+}
+
+.export-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.export-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+}
+
+.export-options input {
+  width: auto;
+  min-height: auto;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 680px) {
+  .vocab-page {
+    width: calc(100vw - 20px);
+    margin: 20px auto;
+  }
+
+  .vocab-header,
+  .vocab-summary {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .vocab-header {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .vocab-actions {
+    justify-content: flex-end;
+  }
+
+  .meaning {
+    white-space: normal;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}

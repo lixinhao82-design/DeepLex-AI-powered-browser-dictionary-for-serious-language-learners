@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>多语言查词助手设置</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="settings-panel" aria-labelledby="page-title">
+        <div class="page-header">
+          <div>
+            <h1 id="page-title">多语言查词助手</h1>
+            <p>配置 DeepSeek API Key，管理本地查词缓存。</p>
+          </div>
+          <button id="open-vocabulary" type="button" class="vocabulary-button">📚 打开生词本</button>
+        </div>
+
+        <div class="form-group">
+          <label for="api-key">DeepSeek API Key</label>
+          <div class="input-row">
+            <input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-...">
+            <button id="toggle-key" type="button" class="icon-button" title="显示或隐藏API Key" aria-label="显示或隐藏API Key">显示</button>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button id="save-key" type="button" class="primary-button">保存</button>
+          <span id="save-status" class="status-text" role="status"></span>
+        </div>
+
+        <hr>
+
+        <section aria-labelledby="cache-title">
+          <h2 id="cache-title">本地缓存</h2>
+          <div class="cache-row">
+            <span>当前已缓存</span>
+            <strong id="cache-count">0</strong>
+            <span>个词条</span>
+          </div>
+          <button id="clear-cache" type="button" class="secondary-button">清空未收藏缓存</button>
+        </section>
+
+        <hr>
+
+        <section aria-labelledby="test-title">
+          <h2 id="test-title">测试 API Key</h2>
+          <div class="form-group">
+            <label for="test-word">测试词</label>
+            <input id="test-word" type="text" value="سلام" autocomplete="off" spellcheck="false">
+          </div>
+          <button id="test-api" type="button" class="secondary-button">测试连接</button>
+          <pre id="test-result" class="test-result" aria-live="polite"></pre>
+        </section>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

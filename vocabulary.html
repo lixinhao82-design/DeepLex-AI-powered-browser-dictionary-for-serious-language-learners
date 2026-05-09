@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>生词本 - 多语言查词助手</title>
+    <link rel="stylesheet" href="vocabulary.css">
+  </head>
+  <body>
+    <main class="vocab-page">
+      <header class="vocab-header">
+        <div>
+          <h1>生词本</h1>
+          <p id="vocab-count">0 条生词</p>
+        </div>
+        <button id="export-csv" type="button" class="primary-button">📥 导出CSV</button>
+      </header>
+
+      <section class="toolbar" aria-label="生词筛选">
+        <input id="search-input" type="search" placeholder="搜索原词或词义" autocomplete="off">
+        <select id="language-filter" aria-label="按语言筛选">
+          <option value="">全部语言</option>
+        </select>
+        <select id="sort-order" aria-label="排序方式">
+          <option value="newest">最新优先</option>
+          <option value="oldest">最早优先</option>
+          <option value="language">按语言</option>
+        </select>
+      </section>
+
+      <section id="empty-state" class="empty-state" hidden>
+        还没有加入生词本的记录。
+      </section>
+
+      <section id="vocab-list" class="vocab-list" aria-live="polite"></section>
+    </main>
+
+    <dialog id="export-dialog" class="export-dialog">
+      <form method="dialog">
+        <h2>选择导出范围</h2>
+        <div id="export-options" class="export-options"></div>
+        <div class="dialog-actions">
+          <button value="cancel" type="submit" class="secondary-button">取消</button>
+          <button id="confirm-export" value="confirm" type="button" class="primary-button">确认导出</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="vocabulary.js"></script>
+  </body>
+</html>
